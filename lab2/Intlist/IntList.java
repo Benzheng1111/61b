@@ -108,12 +108,14 @@ public class IntList {
         }
         else if(A!=null){
             res=new IntList(a.first,null);
+            a=a.rest;
         }
         else{
             res=new IntList(b.first, null);
+            b=b.rest;
         }
         ptr=res;
-        a=a.rest;
+
         while (a!=null){
             ptr.rest= new IntList(a.first,null);
             a=a.rest;
